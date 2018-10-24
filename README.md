@@ -42,7 +42,7 @@ Any other endpoint is considered a `not_allowed_endpoint`. Upon updating this, n
 
 `sudo ./maintenance-stop`: Disables maintenance mode
 
-`sudo ./maintenance-status`: Check is maintenance mode is enabled
+`sudo ./maintenance-status`: Check if maintenance mode is enabled
 
 `sudo ./maintenance-reload`: Reloads NGINX. This needs to be called after updating `not_allowed.conf` or `reverse-proxy.conf`
 

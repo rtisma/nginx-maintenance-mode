@@ -35,10 +35,15 @@ Any other endpoint is considered a `not_allowed_endpoint`. Upon updating this, n
 ## Usage:
 
 `sudo service nginx status`: Checks if nginx service is running
+
 `sudo service nginx start`: Starts nginx service
+
 `sudo ./maintenance-start`: Enables maintenance mode
+
 `sudo ./maintenance-stop`: Disables maintenance mode
+
 `sudo ./maintenance-status`: Check is maintenance mode is enabled
+
 `sudo ./maintenance-reload`: Reloads NGINX. This needs to be called after updating `not_allowed.conf` or `reverse-proxy.conf`
 
 

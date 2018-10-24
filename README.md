@@ -11,7 +11,7 @@ Rules when maintenance_mode is enabled:
 | allowed_ip     |    normal operation   |  normal operation |
 |                |                      |                  |
 
-When maintenance_mode is disabled, all IPs can access all the endpoints (normal operation
+When maintenance_mode is disabled, all IPs can access all the endpoints (normal operation).
 
 ## Installation
 Copy the contents of this repo into `/etc/nginx/maintenance`

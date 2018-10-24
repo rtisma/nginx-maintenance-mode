@@ -1,0 +1,23 @@
+#!/bin/bash
+
+SCRIPT=`readlink -f ${BASH_SOURCE[0]}`
+root=$( dirname  "${SCRIPT}")
+
+if [[ $(id -u) -ne 0 ]]; then 
+        echo "[ERROR]: Please run as root"
+        exit 1
+fi
+
+service nginx status > /dev/null
+if [ $? -ne 0 ]; then
+    echo "[ERROR]: nginx is not running"
+    exit 1
+fi
+
+
+semaphore_path=$root/maintenance_mode.semaphore
+if [ -e $semaphore_path ]; then
+        echo '[SUCCESS]: NGINX maintenance mode is ENABLED!!!!'
+else
+        echo '[SUCCESS]: NGINX maintenance mode is DISABLED!!!!'
+fi

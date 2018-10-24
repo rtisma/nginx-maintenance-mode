@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [[ $(id -u) -ne 0 ]]; then 
+        echo "[ERROR]: Please run as root"
+        exit 1
+fi
+
+service nginx status > /dev/null
+if [ $? -ne 0 ]; then
+    echo "[ERROR]: nginx is not running"
+    exit 1
+fi
+service nginx reload
+if [ $? -eq 0 ]; then
+    echo "[SUCCESS]: Updated NGINX service with new not_allowed.conf"
+fi

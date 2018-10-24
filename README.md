@@ -4,11 +4,12 @@
 This directory contains a special reverse-proxy maintenance configuration for NGINX. It allows you to enable or disable maintenance mode by using a semaphore. 
 
 Rules when maintenance_mode is enabled:
-|                | not_allowed_endpoint | allowed_endpoint |   |   |
-|----------------|----------------------|------------------|---|---|
-| not_allowed_ip |    response is 503   |  normal operation |   |   |
-| allowed_ip     |    normal operation   |  normal operation |   |   |
-|                |                      |                  |   |   |
+
+|                | not_allowed_endpoint | allowed_endpoint |
+|----------------|----------------------|------------------|
+| not_allowed_ip |    response is 503   |  normal operation |
+| allowed_ip     |    normal operation   |  normal operation |
+|                |                      |                  |
 
 When maintenance_mode is disabled, all IPs can access all the endpoints (normal operation
 
